@@ -39,6 +39,23 @@ Replace the contents of package.json with:
   }
 }
 ```
+and create a tsconfig.json file in the root of the project:
+
+```bash
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
+```
+
 3. Create the source file
 
 Run:
@@ -46,6 +63,7 @@ Run:
 mkdir -p src
 touch src/index.ts
 ```
+
 4. Add empty boilerplate
 
 Start with a minimal MCP server.
